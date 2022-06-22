@@ -12,11 +12,11 @@ led = digitalio.DigitalInOut(board.GP25) #led defined
 led.direction = digitalio.Direction.OUTPUT #led value
 
 
-led.value = False #Do you want activate led?
+led.value = True #Do you want activate led?
 time.sleep(0) #You can set bigger than 0 if you want wait before cycle
 depth=5 #Movement area
-betw=120 #Time between movements
-wait=120 #Wait time for restart Cycle
+betw=1 #Time between movements
+wait=1 #Wait time for restart Cycle
 
 
 while True:
@@ -32,4 +32,3 @@ while True:
 	#mouse.move(y=-depth)
 	led.value = not led.value
 	print("time is up, cycle restarting after", wait, "second")
-	time.sleep(wait)
